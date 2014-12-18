@@ -933,15 +933,13 @@ local bystanderCountryNameParts = {
 	"Sisyphus",
 	"Tantalus"
 }
-function OnGamemodeLoaded( )
+function SetGreeceMythNames( )
 	for i = 1, #defaultNameParts do
 		GAMEMODE:RemoveBystanderNamePart(defaultNameParts[i])
 	end
 	for i = 1, #bystanderCountryNameParts do
 		GAMEMODE:AddBystanderNamePart(bystanderCountryNameParts[i])
 	end
-	print("bystandercouyntries.lua DONE")
 end
-hook.Add( "OnGamemodeLoaded", "BystanderCountriesNames", OnGamemodeLoaded )
-print("OKOKOKOKOK")
+hook.Add( "OnGamemodeLoaded", "BystanderGreeceNames", SetGreeceMythNames )
 --OnGamemodeLoaded()
